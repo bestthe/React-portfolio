@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  height: 100px;
+}
+
+.header_wrap {
+  width: 100%;
+  padding: 0 90px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header_logo a {
+  font-family: 'Libre Baskerville', serif;
+  color: var(--sub-bgcolor);
+  font-weight: bold;
+  font-size: 25px;
+  opacity: 0;
+}
+
+.header_nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 15px;
+  background-color: var(--main-bgcolor);
+}
+
+.header_nav li a {
+  display: block;
+  padding: 0 15px;
+  color: var(--sub-bgcolor);
+  font-size: 20px;
+  transition: ease all 0.3s;
+}
+
+.header_nav li a:hover {
+  color: #e9e5d8;
+}

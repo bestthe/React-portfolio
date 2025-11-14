@@ -7,8 +7,21 @@
 
 /* 배경/폰트 설정 */
 body {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
-    sans-serif;
-  background-color: #0d0d0d;
-  color: #fff;
+  font-family: 'Outfit', 'Noto Sans KR', -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+:root {
+  --main-bgcolor: #4f503e;
+  --sub-bgcolor: #d8d4c9;
 }
