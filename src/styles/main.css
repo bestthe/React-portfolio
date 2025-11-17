@@ -1,0 +1,71 @@
+#main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-bgcolor);
+}
+
+.main_wrap {
+  width: calc(100% - 80px);
+  height: calc(100% - 80px);
+  position: relative;
+  border: 1px solid var(--sub-bgcolor);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main_line {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.lt {
+  top: -20px;
+  left: -20px;
+  border-right: 1px solid var(--sub-bgcolor);
+  border-bottom: 1px solid var(--sub-bgcolor);
+}
+
+.lb {
+  bottom: -20px;
+  left: -20px;
+  border-right: 1px solid var(--sub-bgcolor);
+  border-top: 1px solid var(--sub-bgcolor);
+}
+
+.rt {
+  top: -20px;
+  right: -20px;
+  border-left: 1px solid var(--sub-bgcolor);
+  border-bottom: 1px solid var(--sub-bgcolor);
+}
+
+.rb {
+  bottom: -20px;
+  right: -20px;
+  border-left: 1px solid var(--sub-bgcolor);
+  border-top: 1px solid var(--sub-bgcolor);
+}
+
+.main_textbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 80px 50px;
+  color: var(--sub-bgcolor);
+}
+
+.main_textbox h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 130px;
+  font-weight: bold;
+}
+
+.subtext {
+  text-align: right;
+  font-size: 16px;
+  font-weight: normal;
+}
