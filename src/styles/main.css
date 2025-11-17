@@ -2,16 +2,16 @@
   width: 100%;
   height: 100vh;
   background-color: var(--main-bgcolor);
+  position: relative;
 }
 
 .main_wrap {
   width: calc(100% - 80px);
   height: calc(100% - 80px);
-  position: relative;
+  position: absolute;
   border: 1px solid var(--sub-bgcolor);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  inset: 0;
 }
 
 .main_line {
@@ -20,31 +20,24 @@
   height: 20px;
 }
 
-.lt {
-  top: -20px;
-  left: -20px;
-  border-right: 1px solid var(--sub-bgcolor);
-  border-bottom: 1px solid var(--sub-bgcolor);
-}
-
+.lt,
 .lb {
-  bottom: -20px;
   left: -20px;
   border-right: 1px solid var(--sub-bgcolor);
-  border-top: 1px solid var(--sub-bgcolor);
 }
-
+.rt,
+.rb {
+  right: -20px;
+  border-left: 1px solid var(--sub-bgcolor);
+}
+.lt,
 .rt {
   top: -20px;
-  right: -20px;
-  border-left: 1px solid var(--sub-bgcolor);
   border-bottom: 1px solid var(--sub-bgcolor);
 }
-
+.lb,
 .rb {
   bottom: -20px;
-  right: -20px;
-  border-left: 1px solid var(--sub-bgcolor);
   border-top: 1px solid var(--sub-bgcolor);
 }
 
@@ -60,7 +53,7 @@
 
 .main_textbox h1 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 130px;
+  font-size: clamp(48px, 12vw, 130px);
   font-weight: bold;
 }
 
