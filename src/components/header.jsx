@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/header.css';
 
 function Header() {
+  const menu = ['ABOUT', 'WORK', 'PROJECT', 'CONTACT'];
+
   return (
     <header>
       <div className="header_wrap">
@@ -9,18 +11,11 @@ function Header() {
           <a href="/">Web Publisher Portfolio</a>
         </h1>
         <ul className="header_nav">
-          <li>
-            <a href="/">ABOUT</a>
-          </li>
-          <li>
-            <a href="/">WORK</a>
-          </li>
-          <li>
-            <a href="/">PROJECT</a>
-          </li>
-          <li>
-            <a href="/">CONTACT</a>
-          </li>
+          {menu.map((item) => (
+            <li key={item}>
+              <a href={`/${item.toLowerCase()}`}>{item}</a>
+            </li>
+          ))}
         </ul>
       </div>
     </header>
