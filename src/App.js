@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/header';
 import Main from './components/main';
+import About from './components/about';
 import './index.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Main />
+      <About />
     </div>
   );
 }

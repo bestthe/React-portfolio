@@ -21,8 +21,21 @@ li {
   list-style: none;
 }
 
+/* 공통 CSS용 클래스 */
+
 :root {
-  --main-bgcolor: #4f503e;
-  --sub-bgcolor: #d8d4c9;
+  --main-color: #4f503e;
+  --sub-color: #d8d4c9;
   --hover-color: #e9e5d8;
+}
+
+.section_title {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 35px;
+}
+
+.section_pd {
+  padding: 80px 120px;
 }

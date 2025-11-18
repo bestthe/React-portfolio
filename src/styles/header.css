@@ -17,7 +17,7 @@ header {
 
 .header_logo a {
   font-family: 'Libre Baskerville', serif;
-  color: var(--sub-bgcolor);
+  color: var(--sub-color);
   font-weight: bold;
   font-size: 25px;
   opacity: 0;
@@ -28,12 +28,12 @@ header {
   justify-content: space-around;
   gap: 50px;
   padding: 10px 50px;
-  background-color: var(--main-bgcolor);
+  background-color: var(--main-color);
 }
 
 .header_nav a {
   display: block;
-  color: var(--sub-bgcolor);
+  color: var(--sub-color);
   font-size: 20px;
   transition: ease color 0.2s;
 }
