@@ -67,7 +67,11 @@ function About() {
                 효율적이고 안정적인 웹 환경을 제공하는 퍼블리셔로 성 장하고자
                 합니다.
               </p>
-              <a href="/" className="more">
+              <a
+                href="https://www.notion.so/29bedab835e080b495abebab29262c20?source=copy_link"
+                className="more"
+                target="_blank"
+              >
                 자기소개 더보기 <ArrowRightCircleFill />
               </a>
             </div>

@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   background-color: var(--sub-color);
+  border-bottom: 1px solid rgba(79, 80, 62, 0.1);
 }
 
 .about_content {
