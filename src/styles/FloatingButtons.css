@@ -1,0 +1,31 @@
+#floatingButtons {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.floatingBtn {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #7a7c58 0%, #c6b788 70%, #c6b788 100%);
+  box-shadow: 0px 4px 12px rgba(122, 124, 88, 0.35),
+    0px 2px 4px rgba(198, 183, 136, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floatingBtn:hover {
+  box-shadow: 0px 6px 15px rgba(122, 124, 88, 0.35),
+    0px 3px 6px rgba(198, 183, 136, 0.25);
+}
+
+.chatBtn svg {
+  transform: scaleX(-1);
+}

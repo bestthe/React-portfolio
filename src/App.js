@@ -5,6 +5,7 @@ import About from './components/about';
 import Work from './components/work';
 import Project from './components/project';
 import Contact from './components/contact';
+import FloatingButtons from './components/FloatingButtons';
 import './index.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Work />
       <Project />
       <Contact />
+      <FloatingButtons />
     </div>
   );
 }
