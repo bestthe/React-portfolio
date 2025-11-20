@@ -4,6 +4,7 @@ import Main from './components/main';
 import About from './components/about';
 import Work from './components/work';
 import Project from './components/project';
+import Contact from './components/contact';
 import './index.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Work />
       <Project />
+      <Contact />
     </div>
   );
 }
