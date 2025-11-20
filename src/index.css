@@ -21,6 +21,15 @@ li {
   list-style: none;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
 /* 공통 CSS용 클래스 */
 
 :root {
@@ -39,3 +48,4 @@ li {
 .section_pd {
   padding: 80px 120px;
 }
+
