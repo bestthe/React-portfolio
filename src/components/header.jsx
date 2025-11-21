@@ -1,4 +1,5 @@
 import React from 'react';
+import 'animate.css';
 import '../styles/header.css';
 
 function Header() {
@@ -10,7 +11,7 @@ function Header() {
         <h1 className="header_logo">
           <a href="/">Web Publisher Portfolio</a>
         </h1>
-        <ul className="header_nav">
+        <ul className="header_nav animate__animated animate__fadeIn animate__faster">
           {menu.map((item) => (
             <li key={item}>
               <a href={`/${item.toLowerCase()}`}>{item}</a>
