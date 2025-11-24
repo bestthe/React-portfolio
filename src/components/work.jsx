@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import '../styles/work.css';
 import QWERImg from '../assets/QWER.png';
 import DKImg from '../assets/DK.png';
@@ -7,7 +7,7 @@ import ByryznImg from '../assets/BYRYZN.png';
 import UpcloserImg from '../assets/UP_CLOSET.png';
 import hDesignImg from '../assets/h_DESIGN.png';
 
-function Work() {
+const Work = forwardRef((props, ref) => {
   const workList = [
     {
       src: QWERImg,
@@ -56,7 +56,11 @@ function Work() {
   function WorkItem({ src, alt, url, title, sub }) {
     return (
       <li>
-        <a href={url || '#none'} target={url ? '_blank' : undefined}>
+        <a
+          href={url || '#none'}
+          target={url ? '_blank' : undefined}
+          rel={url ? 'noopener noreferrer' : undefined}
+        >
           <img src={src} alt={alt} />
         </a>
         <div className="work_textbox">
@@ -68,7 +72,7 @@ function Work() {
   }
 
   return (
-    <section id="work">
+    <section id="work" ref={ref}>
       <div className="work_wrap section_pd">
         <h2 className="section_title">WORK</h2>
         <ul className="work_content">
@@ -79,6 +83,6 @@ function Work() {
       </div>
     </section>
   );
-}
+});
 
 export default Work;

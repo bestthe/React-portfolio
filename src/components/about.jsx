@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import '../styles/about.css';
 import { ArrowRightCircleFill } from 'react-bootstrap-icons';
 import meImg from '../assets/me.png';
@@ -11,7 +11,7 @@ import reactImg from '../assets/React.png';
 import notionImg from '../assets/Notion.png';
 import githubImg from '../assets/Github.png';
 
-function About() {
+const About = forwardRef((props, ref) => {
   const skills = [
     { src: htmlImg, alt: 'HTML 아이콘' },
     { src: cssImg, alt: 'CSS 아이콘' },
@@ -24,7 +24,7 @@ function About() {
   ];
 
   return (
-    <section id="about">
+    <section id="about" ref={ref}>
       <div className="about_wrap section_pd">
         <h2 className="section_title">ABOUT</h2>
 
@@ -101,6 +101,6 @@ function About() {
       </div>
     </section>
   );
-}
+});
 
 export default About;

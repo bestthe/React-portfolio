@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { SendFill } from 'react-bootstrap-icons';
 import '../styles/contact.css';
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
   return (
-    <section id="contact">
+    <section id="contact" ref={ref}>
       <div className="contact_wrap">
         <h2>CONTACT</h2>
         <p className="contact_subt">함께 일할 웹 퍼블리셔를 찾고 계신가요?</p>
@@ -20,6 +20,6 @@ function Contact() {
       </div>
     </section>
   );
-}
+});
 
 export default Contact;

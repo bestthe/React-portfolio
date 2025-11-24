@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from 'react';
+import { React, useEffect, useState, useRef } from 'react';
 import Header from './components/header';
 import Main from './components/main';
 import About from './components/about';
@@ -28,14 +28,26 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className={`App ${isScrolled ? 'action' : ''}`}>
-      <Header />
+      <Header
+        scrollSection={scrollSection}
+        refs={{ aboutRef, workRef, projectRef, contactRef }}
+      />
       <Main />
-      <About />
-      <Work />
-      <Project />
-      <Contact />
+      <About ref={aboutRef} />
+      <Work ref={workRef} />
+      <Project ref={projectRef} />
+      <Contact ref={contactRef} />
       <FloatingButtons />
     </div>
   );

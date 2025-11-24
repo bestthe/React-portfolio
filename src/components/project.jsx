@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ArrowClockwise } from 'react-bootstrap-icons';
 import 'swiper/css';
@@ -11,7 +11,7 @@ import GraceImg from '../assets/Grace.png';
 import SunsetBreezeImg from '../assets/Sunset_Breeze.png';
 import RadiantImg from '../assets/RADIANT.png';
 
-function Project() {
+const Project = forwardRef((props, ref) => {
   const projects = [
     {
       title: 'PEACHFLORAL',
@@ -70,7 +70,7 @@ function Project() {
   ];
 
   return (
-    <section id="project">
+    <section id="project" ref={ref}>
       <div className="project_wrap">
         <h3>PROJECT</h3>
         <Swiper spaceBetween={35} slidesPerView={3.6}>
@@ -130,6 +130,6 @@ function Project() {
       </div>
     </section>
   );
-}
+});
 
 export default Project;
