@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import '../styles/about.css';
 import { ArrowRightCircleFill } from 'react-bootstrap-icons';
 import meImg from '../assets/me.png';
@@ -26,14 +26,16 @@ const About = forwardRef((props, ref) => {
   return (
     <section id="about" ref={ref}>
       <div className="about_wrap section_pd">
-        <h2 className="section_title">ABOUT</h2>
+        <h2 data-aos="fade-in" className="section_title">
+          ABOUT
+        </h2>
 
         <div className="about_content">
           <div className="right_content">
-            <div className="about_image">
+            <div data-aos="fade-right" className="about_image">
               <img src={meImg} alt="나를 대신하는 캐릭터 이미지" />
             </div>
-            <div className="skills">
+            <div data-aos="fade-up" className="skills">
               <h3>SKILLS</h3>
               <ul>
                 {skills.map((skill) => (
@@ -46,7 +48,7 @@ const About = forwardRef((props, ref) => {
           </div>
 
           <div className="left_content">
-            <div className="about_me">
+            <div data-aos="fade-in" className="about_me">
               <h3>ABOUT ME</h3>
               <p>
                 안녕하세요! 1년 7개월 차 웹퍼블리셔 박현수입니다.
@@ -76,7 +78,7 @@ const About = forwardRef((props, ref) => {
               </a>
             </div>
 
-            <div className="education">
+            <div data-aos="fade-up" className="education">
               <h3>EDUCATION</h3>
               <ul>
                 <li>
@@ -89,7 +91,7 @@ const About = forwardRef((props, ref) => {
               </ul>
             </div>
 
-            <div className="work_experience">
+            <div data-aos="fade-up" className="work_experience">
               <h3>WORK EXPERIENCE</h3>
               <ul>
                 <li>2023.03 - 2024.10 에이치디자인</li>

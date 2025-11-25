@@ -23,9 +23,21 @@
 }
 
 .contact_email {
-  font-size: 80px;
   margin-bottom: 40px;
-  letter-spacing: 5px;
+  display: flex;
+  gap: 4px;
+}
+
+.contact_email span {
+  font-size: 80px;
+  opacity: 0;
+  transition: all 500ms ease-in;
+  transform: translateY(30px);
+}
+
+.contact_email span.up {
+  opacity: 1;
+  transform: none;
 }
 
 .contact_desc {

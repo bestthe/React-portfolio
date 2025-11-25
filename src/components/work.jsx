@@ -74,7 +74,9 @@ const Work = forwardRef((props, ref) => {
   return (
     <section id="work" ref={ref}>
       <div className="work_wrap section_pd">
-        <h2 className="section_title">WORK</h2>
+        <h2 data-aos="fade-in" className="section_title">
+          WORK
+        </h2>
         <ul className="work_content">
           {workList.map((w) => (
             <WorkItem key={w.title} {...w} />

@@ -72,7 +72,7 @@ const Project = forwardRef((props, ref) => {
   return (
     <section id="project" ref={ref}>
       <div className="project_wrap">
-        <h3>PROJECT</h3>
+        <h3 data-aos="fade-in">PROJECT</h3>
         <Swiper spaceBetween={35} slidesPerView={3.6}>
           {projects.map((project, idx) => (
             <SwiperSlide key={project.title}>

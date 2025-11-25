@@ -7,6 +7,8 @@ import Project from './components/project';
 import Contact from './components/contact';
 import FloatingButtons from './components/FloatingButtons';
 import './index.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,6 +38,17 @@ function App() {
   const scrollSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100,
+      });
+    }, 100);
+  }, []);
 
   return (
     <div className={`App ${isScrolled ? 'action' : ''}`}>
