@@ -31,6 +31,8 @@
   box-shadow: 4px 4px 4px 5px rgba(0, 0, 0, 0.15);
   position: absolute;
   overflow: hidden;
+  transition: all ease 0.5s;
+  backface-visibility: hidden;
 }
 
 /* project 텍스트 카드 */
@@ -45,6 +47,14 @@
   z-index: 3;
   transition: ease all 0.3s;
   color: var(--main-color);
+  opacity: 1;
+}
+
+.card_wrapper.swapped .project_tcard {
+  top: 45px;
+  left: 35px;
+  z-index: 2;
+  opacity: 0.9;
 }
 
 .tcard_number {
@@ -64,6 +74,11 @@
   display: flex;
   gap: 3px;
   color: var(--main-color);
+}
+
+.card_wrapper.swapped .text_changeBtn {
+  cursor: default;
+  pointer-events: none;
 }
 
 .card_changebtn svg {
@@ -138,9 +153,16 @@
 
 /* project 이미지 카드 */
 .project_icard {
-  bottom: 10px;
-  right: 5px;
+  top: 45px;
+  left: 35px;
   z-index: 2;
+  opacity: 1;
+}
+
+.card_wrapper.swapped .project_icard {
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .project_icardwrap {
@@ -157,6 +179,10 @@
   opacity: 0.9;
 }
 
+.card_wrapper.swapped .project_icardwrap img {
+  opacity: 1;
+}
+
 .img_btn {
   position: absolute;
   top: 20px;
@@ -165,5 +191,11 @@
   background-color: rgba(216, 212, 201, 0.6);
   border-radius: 5px;
   pointer-events: none;
-  cursor: not-allowed;
+  cursor: default;
+}
+
+.card_wrapper.swapped .detail_viewbtn a,
+.card_wrapper.swapped .img_btn {
+  pointer-events: auto;
+  cursor: pointer;
 }
