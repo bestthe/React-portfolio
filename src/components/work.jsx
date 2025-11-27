@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useState } from 'react';
 import '../styles/work.css';
 import QWERImg from '../assets/QWER.png';
 import DKImg from '../assets/DK.png';
@@ -8,6 +8,8 @@ import UpcloserImg from '../assets/UP_CLOSET.png';
 import hDesignImg from '../assets/h_DESIGN.png';
 
 const Work = forwardRef((props, ref) => {
+  const [toastMessage, setToastMessage] = useState('');
+
   const workList = [
     {
       src: QWERImg,
@@ -54,10 +56,21 @@ const Work = forwardRef((props, ref) => {
   ];
 
   function WorkItem({ src, alt, url, title, sub }) {
+    const handleClick = (e) => {
+      if (!url) {
+        e.preventDefault();
+        setToastMessage(
+          '현재 프로젝트는 클라이언트 측 디자인 변경으로 링크 제공이 어렵습니다.'
+        );
+        setTimeout(() => setToastMessage(''), 2500);
+      }
+    };
+
     return (
       <li>
         <a
           href={url || '#none'}
+          onClick={handleClick}
           target={url ? '_blank' : undefined}
           rel={url ? 'noopener noreferrer' : undefined}
         >
@@ -83,6 +96,8 @@ const Work = forwardRef((props, ref) => {
           ))}
         </ul>
       </div>
+
+      {toastMessage && <div className="toast_message">{toastMessage}</div>}
     </section>
   );
 });

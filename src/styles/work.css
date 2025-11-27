@@ -22,9 +22,11 @@
 }
 
 .work_content li img {
+  display: block;
+  border-radius: 30px;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   opacity: 0.9;
   transition: ease opacity 0.3s, ease transform 0.3s;
 }
@@ -49,4 +51,40 @@
 
 .work_textbox p {
   font-size: 20px;
+}
+
+.toast_message {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  z-index: 9999;
+  animation: toastFadeIn 0.3s ease, toastFadeOut 0.4s ease 2s forwards;
+}
+
+@keyframes toastFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes toastFadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
 }
