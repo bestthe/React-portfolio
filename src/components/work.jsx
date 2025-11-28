@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef, useState, useRef } from 'react';
 import '../styles/work.css';
 import QWERImg from '../assets/QWER.png';
 import DKImg from '../assets/DK.png';
@@ -9,6 +9,8 @@ import hDesignImg from '../assets/h_DESIGN.png';
 
 const Work = forwardRef((props, ref) => {
   const [toastMessage, setToastMessage] = useState('');
+
+  const timeoutRef = useRef(null);
 
   const workList = [
     {
@@ -59,10 +61,20 @@ const Work = forwardRef((props, ref) => {
     const handleClick = (e) => {
       if (!url) {
         e.preventDefault();
-        setToastMessage(
-          '현재 프로젝트는 클라이언트 측 디자인 변경으로 링크 제공이 어렵습니다.'
-        );
-        setTimeout(() => setToastMessage(''), 2500);
+
+        setToastMessage('');
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+
+        setTimeout(() => {
+          setToastMessage(
+            '현재 프로젝트는 클라이언트 측 디자인 변경으로 링크 제공이 어렵습니다.'
+          );
+        }, 0);
+
+        timeoutRef.current = setTimeout(() => {
+          setToastMessage('');
+          timeoutRef.current = null;
+        }, 2500);
       }
     };
 
