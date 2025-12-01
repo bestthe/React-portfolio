@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 100;
+  z-index: -1;
   opacity: 0;
   pointer-events: none;
   transition: ease opacity 0.1s;
@@ -14,6 +14,7 @@
 .action #floatingButtons {
   opacity: 1;
   pointer-events: auto;
+  z-index: 100;
 }
 
 .chatBtn {
