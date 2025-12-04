@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect } from 'react';
+import React, { forwardRef } from 'react';
 import '../styles/about.css';
 import { ArrowRightCircleFill } from 'react-bootstrap-icons';
 import meImg from '../assets/me.png';
@@ -72,6 +72,7 @@ const About = forwardRef((props, ref) => {
                 href="https://www.notion.so/29bedab835e080b495abebab29262c20?source=copy_link"
                 className="more"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 자기소개 더보기 <ArrowRightCircleFill />
               </a>
