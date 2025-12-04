@@ -4,7 +4,7 @@ import '../styles/FloatingButtons.css';
 import ChatWindow from '../components/chatwindow';
 
 function FloatingButtons() {
-  const [isChat, setIsChat] = useState(true);
+  const [isChat, setIsChat] = useState(false);
 
   const toggleChat = () => setIsChat((prev) => !prev);
 
@@ -17,13 +17,13 @@ function FloatingButtons() {
       <div id="floatingButtons">
         <div className="chatBtn" onClick={toggleChat}>
           <button
-            className={`chat_onBtn ${isChat ? 'visible' : ''}`}
+            className={`chat_onBtn ${!isChat && 'visible'}`}
             type="button"
           >
             <ChatFill size={25} color="#fff" />
           </button>
           <button
-            className={`chat_offBtn ${!isChat ? 'visible' : ''}`}
+            className={`chat_offBtn ${isChat && 'visible'}`}
             type="button"
           >
             <X size={35} color="#4f503e" />

@@ -94,6 +94,7 @@ function ChatWindow({ isChat }) {
 
   const [messages, setMessages] = useState([]);
   const bottomRef = useRef(null);
+  const [initialized, setInitialized] = useState(false);
 
   const scrollToBottom = () => {
     if (bottomRef.current)
@@ -101,14 +102,20 @@ function ChatWindow({ isChat }) {
   };
 
   useEffect(() => {
-    setMessages([{ from: 'system', type: 'loading' }]);
+    if (!isChat) return;
 
-    const timer = setTimeout(() => {
-      setMessages([{ from: 'system', type: 'questionList' }]);
-    }, 2000);
+    if (!initialized) {
+      setInitialized(true);
 
-    return () => clearTimeout(timer);
-  }, []);
+      setMessages([{ from: 'system', type: 'loading' }]);
+
+      const timer = setTimeout(() => {
+        setMessages([{ from: 'system', type: 'questionList' }]);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isChat]);
 
   useEffect(() => {
     scrollToBottom();
@@ -195,7 +202,7 @@ function ChatWindow({ isChat }) {
   };
 
   return (
-    <div id="chat_layout" className={`${!isChat && 'chatOn'}`}>
+    <div id="chat_layout" className={`${isChat && 'chatOn'}`}>
       <div className="chat_header">
         <h2>
           <img src={meImg} alt="나를 대신하는 캐릭터이미지" />
