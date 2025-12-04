@@ -2,7 +2,11 @@ name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches: ['main', 'gh-pages']
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -18,7 +22,7 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build React App
         run: npm run build
