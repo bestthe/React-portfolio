@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-portfolio/static/css/main.32b0b6ad.css",
+    "main.js": "/React-portfolio/static/js/main.f9be6eeb.js",
+    "static/media/QWER.png": "/React-portfolio/static/media/QWER.d3594f69bf9de1a0191d.png",
+    "static/media/UP_CLOSET.png": "/React-portfolio/static/media/UP_CLOSET.bb4fabbd5cae02140188.png",
+    "static/media/ANMOC.png": "/React-portfolio/static/media/ANMOC.167cce476992be7d377a.png",
+    "static/media/DK.png": "/React-portfolio/static/media/DK.e5174d6060e28e9c21af.png",
+    "static/media/BYRYZN.png": "/React-portfolio/static/media/BYRYZN.bc430fbb9c927fa6c5a7.png",
+    "static/media/h_DESIGN.png": "/React-portfolio/static/media/h_DESIGN.2d5aae715f626cb67cc6.png",
+    "static/media/Sunset_Breeze.png": "/React-portfolio/static/media/Sunset_Breeze.22aba37e30544469d522.png",
+    "static/media/Grace.png": "/React-portfolio/static/media/Grace.a73a1101fbb85f52942b.png",
+    "static/media/RADIANT.png": "/React-portfolio/static/media/RADIANT.b4fc695b332c3571eb25.png",
+    "static/media/Daily.png": "/React-portfolio/static/media/Daily.839d867d65e78600879b.png",
+    "static/media/PEACHFLORAL.png": "/React-portfolio/static/media/PEACHFLORAL.a71ee12ed9237b13d65c.png",
+    "static/media/Elire.png": "/React-portfolio/static/media/Elire.643e8d0af7247adf1504.png",
+    "static/media/me.png": "/React-portfolio/static/media/me.a115e239e045da446357.png",
+    "index.html": "/React-portfolio/index.html",
+    "main.32b0b6ad.css.map": "/React-portfolio/static/css/main.32b0b6ad.css.map",
+    "main.f9be6eeb.js.map": "/React-portfolio/static/js/main.f9be6eeb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32b0b6ad.css",
+    "static/js/main.f9be6eeb.js"
+  ]
+}
