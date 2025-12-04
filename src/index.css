@@ -49,3 +49,57 @@ button {
   padding: 80px 120px;
 }
 
+@media (max-width: 1440px) {
+  .section_pd {
+    padding: 80px 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .section_pd {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section_pd {
+    padding: 60px 40px;
+  }
+
+  .section_title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section_pd {
+    padding: 40px;
+  }
+
+  .section_title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section_pd {
+    padding: 30px;
+  }
+
+  .section_title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .section_pd {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section_title {
+    font-size: 23px;
+  }
+}
