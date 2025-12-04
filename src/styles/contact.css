@@ -85,11 +85,6 @@
   }
 }
 @media (max-width: 768px) {
-  #contact {
-    height: 100%;
-    min-height: var(--vh, 100vh);
-  }
-
   .contact_subt {
     font-size: 25px;
     margin-bottom: 25px;
