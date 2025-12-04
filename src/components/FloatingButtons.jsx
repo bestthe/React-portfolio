@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChatFill, ArrowUp, X } from 'react-bootstrap-icons';
 import '../styles/FloatingButtons.css';
 import ChatWindow from '../components/chatwindow';
@@ -11,6 +11,24 @@ function FloatingButtons() {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const handleBodyScroll = () => {
+      if (isChat && window.innerWidth <= 500) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
+
+    handleBodyScroll();
+    window.addEventListener('resize', handleBodyScroll);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('resize', handleBodyScroll);
+    };
+  }, [isChat]);
 
   return (
     <>
@@ -34,7 +52,7 @@ function FloatingButtons() {
         </button>
       </div>
 
-      <ChatWindow isChat={isChat} />
+      <ChatWindow isChat={isChat} toggleChat={toggleChat} />
     </>
   );
 }

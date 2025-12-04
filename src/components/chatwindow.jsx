@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/chatwindow.css';
 import meImg from '../assets/me.png';
-import { ArrowRight } from 'react-bootstrap-icons';
+import { ArrowRight, X } from 'react-bootstrap-icons';
 
-function ChatWindow({ isChat }) {
+function ChatWindow({ isChat, toggleChat }) {
   const chatList = [
     {
       id: '1',
@@ -252,6 +252,13 @@ function ChatWindow({ isChat }) {
             <h3>박현수</h3>
             <div className="circle"></div>
             <div className="circle_animation"></div>
+            <button
+              className="chat_closeBtn"
+              type="button"
+              onClick={toggleChat}
+            >
+              <X size={35} color="#555" />
+            </button>
           </div>
           <p className="chat_subt">궁금하신 점이 있으신가요?</p>
         </div>
