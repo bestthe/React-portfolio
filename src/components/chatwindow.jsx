@@ -94,7 +94,10 @@ function ChatWindow({ isChat }) {
 
   const [messages, setMessages] = useState([]);
   const bottomRef = useRef(null);
+
   const [initialized, setInitialized] = useState(false);
+  const [initialDone, setInitialDone] = useState(false);
+  const timerRef = useRef(null);
 
   const scrollToBottom = () => {
     if (bottomRef.current)
@@ -102,19 +105,56 @@ function ChatWindow({ isChat }) {
   };
 
   useEffect(() => {
-    if (!isChat) return;
+    const clearTimer = () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
 
-    if (!initialized) {
-      setInitialized(true);
+    if (!isChat) {
+      return () => {
+        clearTimer();
+      };
+    }
+
+    if (initialized && initialDone) {
+      setMessages((prev) => prev.filter((m) => m.type !== 'loading'));
+      return () => {
+        clearTimer();
+      };
+    }
+
+    if (initialized && !initialDone) {
+      clearTimer();
 
       setMessages([{ from: 'system', type: 'loading' }]);
 
-      const timer = setTimeout(() => {
+      timerRef.current = setTimeout(() => {
         setMessages([{ from: 'system', type: 'questionList' }]);
+        setInitialDone(true);
+        timerRef.current = null;
       }, 2000);
 
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimer();
+      };
     }
+
+    setInitialized(true);
+    setInitialDone(false);
+
+    setMessages([{ from: 'system', type: 'loading' }]);
+
+    timerRef.current = setTimeout(() => {
+      setMessages([{ from: 'system', type: 'questionList' }]);
+      setInitialDone(true);
+      timerRef.current = null;
+    }, 2000);
+
+    return () => {
+      clearTimer();
+    };
   }, [isChat]);
 
   useEffect(() => {
