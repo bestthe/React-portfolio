@@ -191,7 +191,6 @@
 .mine {
   background-color: #333;
   margin-left: auto;
-  text-align: center;
 }
 
 .mine:after {
@@ -295,4 +294,26 @@
   color: #333;
   text-align: center;
   margin-bottom: 10px;
+}
+
+/* Chatwindow mediaQuery */
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 360px) {
+}
+
+@media (max-width: 320px) {
 }
