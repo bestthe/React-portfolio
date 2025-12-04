@@ -17,7 +17,8 @@ function Main() {
             Portfolio
           </h1>
           <p className="subtext">
-            안녕하세요. 1년 7개월 차 웹퍼블리셔 박현수입니다.
+            안녕하세요.
+            <br className="mobile_br" /> 1년 7개월 차 웹퍼블리셔 박현수입니다.
           </p>
         </div>
       </div>
