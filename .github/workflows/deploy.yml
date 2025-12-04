@@ -2,7 +2,7 @@ name: Deploy React App to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]   # main 브랜치에 push할 때마다 자동배포
+    branches: ['main']
   workflow_dispatch:
 
 jobs:
