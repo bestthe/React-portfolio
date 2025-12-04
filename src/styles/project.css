@@ -1,12 +1,12 @@
 #project {
   width: 100%;
   background-color: var(--main-color);
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .project_wrap {
   height: 100%;
-  padding: 80px 0 80px 120px;
+  padding: 80px 0 0 120px;
 }
 
 .project_wrap > h3 {
@@ -19,14 +19,16 @@
 .card_wrapper {
   position: relative;
   width: 100%;
-  min-height: 630px;
+  min-height: calc(var(--vh) * 0.8);
+  max-height: 630px;
 }
 
 /* project 카드 공통 CSS */
 .project_tcard,
 .project_icard {
   width: 90%;
-  height: 575px; /* 시각적 통일 */
+  height: calc(var(--vh) * 0.75);
+  max-height: 575px; /* 시각적 통일 */
   border-radius: 20px;
   box-shadow: 4px 4px 4px 5px rgba(0, 0, 0, 0.15);
   position: absolute;
@@ -61,6 +63,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .tcard_number h3 {
@@ -74,6 +78,12 @@
   display: flex;
   gap: 3px;
   color: var(--main-color);
+}
+
+.text_changeBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .card_wrapper.swapped .text_changeBtn {
@@ -101,11 +111,14 @@
 .sub_detail {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .sub_detail li {
   font-weight: bold;
   font-size: 16px;
+  flex-wrap: wrap;
+  text-wrap: nowrap;
 }
 
 .detail_viewbtn {
@@ -203,4 +216,182 @@
 .card_wrapper.swapped .img_btn {
   pointer-events: auto;
   cursor: pointer;
+}
+
+/* Project mediaQuery */
+@media (max-width: 1440px) {
+  .project_wrap {
+    padding: 80px 0 0 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .project_wrap {
+    padding: 80px 0 0 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .project_wrap {
+    padding: 60px 0 0 40px;
+  }
+
+  .project_wrap > h3 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project_wrap {
+    padding: 40px 0 0 40px;
+  }
+
+  .project_wrap > h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tcard_number h3 {
+    font-size: 50px;
+  }
+
+  .tcard_title {
+    font-size: 40px;
+  }
+
+  .main_detail,
+  .sub_detail li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+}
+
+@media (max-width: 480px) {
+  .project_wrap {
+    padding: 30px 0 0 30px;
+  }
+
+  .tcard_number h3 {
+    font-size: 40px;
+  }
+
+  .tcard_title {
+    font-size: 35px;
+  }
+
+  .detail_viewbtn a {
+    font-size: 45px;
+  }
+
+  .project_wrap > h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tcard_title {
+    font-size: 30px;
+  }
+
+  .detail_viewbtn a {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .detail_viewbtn a:after {
+    height: 90%;
+  }
+
+  .project_tcard {
+    padding: 20px;
+  }
+
+  .project_tcard,
+  .project_icard {
+    width: 95%;
+  }
+
+  .text_changeBtn {
+    top: 20px;
+    right: 20px;
+  }
+
+  .project_icard {
+    top: 25px;
+    left: 15px;
+  }
+
+  .card_wrapper.swapped .project_tcard {
+    top: 25px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project_wrap {
+    padding: 30px 0 0 20px;
+  }
+
+  .card_changebtn {
+    font-size: 14px;
+  }
+
+  .mode_change {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .project_wrap > h3 {
+    font-size: 23px;
+  }
+
+  .main_detail,
+  .sub_detail li {
+    font-size: 12px;
+  }
+
+  .detail_viewbtn a {
+    font-size: 35px;
+  }
+
+  .detail_viewbtn a:before {
+    height: 4px;
+  }
+
+  .detail_viewbtn a:after {
+    width: 4px;
+  }
+
+  .tcard_title {
+    font-size: 25px;
+  }
+
+  .tcard_number h3 {
+    font-size: 35px;
+  }
+
+  .card_changebtn {
+    font-size: 12px;
+  }
+
+  .mode_change {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (hover: none) {
+  .card_changebtn:hover svg {
+    transform: none;
+  }
+
+  .detail_viewbtn a:hover {
+    letter-spacing: normal;
+  }
 }

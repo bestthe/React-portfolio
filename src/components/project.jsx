@@ -79,23 +79,64 @@ const Project = forwardRef((props, ref) => {
     <section id="project" ref={ref}>
       <div className="project_wrap">
         <h3 data-aos="fade-in">PROJECT</h3>
-        <Swiper spaceBetween={35} slidesPerView={3.6}>
+        <Swiper
+          spaceBetween={15}
+          slidesPerView={1.1}
+          breakpoints={{
+            1740: {
+              spaceBetween: 35,
+              slidesPerView: 3.6,
+            },
+            1620: {
+              spaceBetween: 30,
+              slidesPerView: 3.4,
+            },
+            1520: {
+              spaceBetween: 25,
+              slidesPerView: 3.2,
+            },
+            1315: {
+              spaceBetween: 20,
+              slidesPerView: 2.8,
+            },
+            1085: {
+              spaceBetween: 20,
+              slidesPerView: 2.4,
+            },
+            950: {
+              spaceBetween: 20,
+              slidesPerView: 2.1,
+            },
+            820: {
+              spaceBetween: 20,
+              slidesPerView: 1.8,
+            },
+            815: {
+              spaceBetween: 15,
+              slidesPerView: 1.6,
+            },
+            600: {
+              spaceBetween: 15,
+              slidesPerView: 1.4,
+            },
+          }}
+        >
           {projects.map((project, idx) => (
             <SwiperSlide key={project.title}>
               <div className={`card_wrapper ${isFront[idx] ? 'swapped' : ''}`}>
                 <div className="project_tcard">
                   <div className="tcard_number">
                     <h3>{(idx + 1).toString().padStart(2, '0')}</h3>
+                    <h2 className="tcard_title">{project.title}</h2>
                     <button
                       type="button"
                       className="card_changebtn text_changeBtn"
                       onClick={() => handleCardSwap(idx)}
                     >
-                      Preview <ArrowClockwise size={19} />
+                      Preview{' '}
+                      <ArrowClockwise size={19} className="mode_change" />
                     </button>
                   </div>
-
-                  <h2 className="tcard_title">{project.title}</h2>
 
                   <div className="card_detail">
                     <p className="main_detail">
@@ -137,7 +178,8 @@ const Project = forwardRef((props, ref) => {
                       className="card_changebtn img_btn"
                       onClick={() => handleCardSwap(idx)}
                     >
-                      Return <ArrowClockwise size={19} />
+                      Return{' '}
+                      <ArrowClockwise size={19} className="mode_change" />
                     </button>
                   </div>
                 </div>
