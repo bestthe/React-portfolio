@@ -71,6 +71,7 @@
   font-size: 14px;
   z-index: 9999;
   animation: toastFadeIn 0.3s ease, toastFadeOut 0.4s ease 2s forwards;
+  text-wrap: nowrap;
 }
 
 @keyframes toastFadeIn {
@@ -130,6 +131,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .toast_message {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 480px) {
   .work_textbox p {
     font-size: 14px;
@@ -142,6 +149,13 @@
 
   .work_content li a {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (max-width: 460px) {
+  .toast_message {
+    width: 95%;
+    text-wrap: wrap;
   }
 }
 
