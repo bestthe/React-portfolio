@@ -45,6 +45,7 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  const mainRef = useRef(null);
   const aboutRef = useRef(null);
   const workRef = useRef(null);
   const projectRef = useRef(null);
@@ -69,9 +70,9 @@ function App() {
     <div className={`App ${isScrolled ? 'action' : ''}`}>
       <Header
         scrollSection={scrollSection}
-        refs={{ aboutRef, workRef, projectRef, contactRef }}
+        refs={{ mainRef, aboutRef, workRef, projectRef, contactRef }}
       />
-      <Main />
+      <Main mainRef={mainRef} />
       <About ref={aboutRef} />
       <Work ref={workRef} />
       <Project ref={projectRef} />

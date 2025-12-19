@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/main.css';
 
-function Main() {
+function Main({ mainRef }) {
   const lines = ['lt', 'lb', 'rt', 'rb'];
 
   return (
-    <section id="main">
+    <section id="main" ref={mainRef}>
       <div className="main_wrap">
         {lines.map((dir) => (
           <div key={dir} className={`main_line ${dir}`}></div>

@@ -21,7 +21,7 @@ header {
   align-items: center;
 }
 
-.header_logo a {
+.header_logo button {
   display: block;
   font-family: 'Libre Baskerville', serif;
   color: var(--sub-color);
@@ -32,7 +32,7 @@ header {
   transition: ease opacity 0.1s;
 }
 
-.action .header_logo a {
+.action .header_logo button {
   opacity: 1;
   pointer-events: auto;
 }
@@ -73,7 +73,7 @@ header {
     font-size: 18px;
   }
 
-  .header_logo a {
+  .header_logo button {
     font-size: 23px;
   }
 }
@@ -87,7 +87,7 @@ header {
     padding: 0 30px;
   }
 
-  .header_logo a {
+  .header_logo button {
     font-size: 20px;
   }
 
@@ -115,7 +115,7 @@ header {
 }
 
 @media (max-width: 480px) {
-  .header_logo a {
+  .header_logo button {
     font-size: 18px;
   }
 }
@@ -125,7 +125,7 @@ header {
     padding: 0 20px;
   }
 
-  .header_logo a {
+  .header_logo button {
     font-size: 16px;
   }
 }

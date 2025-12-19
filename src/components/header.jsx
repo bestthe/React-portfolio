@@ -14,7 +14,9 @@ function Header({ scrollSection, refs }) {
     <header>
       <div className="header_wrap">
         <h1 className="header_logo">
-          <a href="/">Web Publisher Portfolio</a>
+          <button onClick={() => scrollSection(refs.mainRef)}>
+            Web Publisher Portfolio
+          </button>
         </h1>
         <ul className="header_nav animate__animated animate__fadeIn animate__faster">
           {menu.map((item) => (
