@@ -10,9 +10,29 @@ import DailyImg from '../assets/Daily.png';
 import GraceImg from '../assets/Grace.png';
 import SunsetBreezeImg from '../assets/Sunset_Breeze.png';
 import RadiantImg from '../assets/RADIANT.png';
+import TodoImg from '../assets/Todo.png';
+import MovieImg from '../assets/Movie.png';
 
 const Project = forwardRef((props, ref) => {
   const projects = [
+    {
+      title: 'MovieApp',
+      img: MovieImg,
+      url: 'https://bestthe.github.io/Movie-App/',
+      description: `TMDB API를 활용해 영화 정보를 제공하는 MovieApp을 기획·제작했습니다.
+                    \n\n반응형 구조로 모바일 환경에서도 안정적인 UI를 유지하며 영화 탐색과 정보 확인 흐름을 직관적으로 구성했습니다.
+                    \n\n포스터 중심의 레이아웃과 깔끔한 인터페이스로 콘텐츠에 집중할 수 있도록 설계하고 사용자 경험을 고려한 반응형 구조로 구현했습니다.`,
+      tags: ['#리액트', '#반응형웹', '#리액트라우터'],
+    },
+    {
+      title: 'TodoApp',
+      img: TodoImg,
+      url: 'https://bestthe.github.io/Todo-App/',
+      description: `React를 기반으로 한 TodoApp을 제작하여 할 일 추가, 완료, 삭제 기능을 구현했습니다.
+                    \n\n반응형 구조로 모바일 환경에서도 안정적인 UI를 유지하며 사용 흐름이 단순하고 직관적으로 동작하도록 구성했습니다.
+                    \n\n불필요한 요소를 줄인 깔끔한 인터페이스로 작업 집중도를 높이고 사용자 경험을 고려한 반응형 구조로 구현했습니다.`,
+      tags: ['#리액트', '#반응형웹', '#로컬스토리지'],
+    },
     {
       title: 'PEACHFLORAL',
       img: PeachFloralImg,
