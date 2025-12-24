@@ -10,11 +10,22 @@ import DailyImg from '../assets/Daily.png';
 import GraceImg from '../assets/Grace.png';
 import SunsetBreezeImg from '../assets/Sunset_Breeze.png';
 import RadiantImg from '../assets/RADIANT.png';
+import PortfolioImg from '../assets/Portfolio.png';
 import TodoImg from '../assets/Todo.png';
 import MovieImg from '../assets/Movie.png';
+import WeatherImg from '../assets/Weather.png';
 
 const Project = forwardRef((props, ref) => {
   const projects = [
+    {
+      title: 'WeatherApp',
+      img: WeatherImg,
+      url: 'https://bestthe.github.io/Weather-App/',
+      description: `OpenWeather API를 활용해 날씨 정보를 제공하는 WeatherApp을 기획·제작했습니다.
+                    \n\n반응형 구조로 모바일 환경에서도 안정적인 UI를 유지하며 지역별 날씨 정보를 직관적 확인할 수 있도록 구성했습니다.
+                    \n\n깔끔한 인터페이스로 콘텐츠에 집중할 수 있도록 설계하고 사용자 경험을 고려한 반응형 구조로 구현했습니다.`,
+      tags: ['#리액트', '#반응형웹', '#API데이터'],
+    },
     {
       title: 'MovieApp',
       img: MovieImg,
@@ -34,10 +45,19 @@ const Project = forwardRef((props, ref) => {
       tags: ['#리액트', '#반응형웹', '#로컬스토리지'],
     },
     {
+      title: 'Portfolio',
+      img: PortfolioImg,
+      url: 'http://anjdal4849.dothome.co.kr/',
+      description: `JavaScript를 독학하며 제작한 첫 번째 포트폴리오로, GSAP ScrollTrigger와 인트로 페이지를 활용해 인터랙티브한 화면을 구현했습니다.
+                    \n\n스크롤과 사용자 동작에 반응하는 애니메이션을 중심으로 콘텐츠를 자연스럽게 탐색할 수 있도록 흐름을 설계했습니다.
+                    \n\n단순한 정보 나열이 아닌 웹의 동작 원리와 사용자 경험에 대한 이해를 바탕으로 구성한 포트폴리오입니다.`,
+      tags: ['#첫번째포폴', '#반응형웹', '#GSAP스크롤'],
+    },
+    {
       title: 'PEACHFLORAL',
       img: PeachFloralImg,
       url: 'https://ecudemo330278.cafe24.com/',
-      description: `카페24 기본 스킨 기반으로 피치톤 감성과 자연스러운 브랜드 이미지를 살린 화장품 쇼핑몰을 디자인했습니다.
+      description: `JavaScript를 독학하고 제작한 첫 번째 Portfolio로 GSAP스크롤 트리거와 인트로 페이지를 제작하여
                     \n\n반응형 구조로 모바일에서도 깔끔한 UI를 유지하며 상품 진열과 구매 흐름을 직관적으로 구성했습니다.
                     \n\n부드러운 컬러톤과 정돈된 구성으로 브랜드 감성을 표현하고 사용자 경험을 고려한 반응형 구조로 제작했습니다.`,
       tags: ['#감성UI', '#반응형웹', '#브랜드아이덴티티'],
